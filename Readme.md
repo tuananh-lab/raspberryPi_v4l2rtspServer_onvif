@@ -1,4 +1,4 @@
-# DỰ ÁN ứNG DỤNG THƯ VIỆN V4L2RSTP VÀ V4L2ONVIF ĐỂ XÂY DỰNG MÁY CHỦ PHÁT VIDEO TRỰC TUYẾN TRÊN RASPBERY PI
+# DỰ ÁN ỨNG DỤNG THƯ VIỆN V4L2RSTP VÀ V4L2ONVIF ĐỂ XÂY DỰNG MÁY CHỦ PHÁT VIDEO TRỰC TUYẾN TRÊN RASPBERY PI
 
 ## Giới thiệu dự án
 Dự án "Ứng dụng thư viện V4L2RTSP và V4L2ONVIF để xây dựng máy chủ phát video trực tuyến trên Raspberry Pi" nhằm mục tiêu tạo ra một giải pháp phát trực tuyến video chất lượng cao và tiết kiệm chi phí bằng cách sử dụng Raspberry Pi. Bằng cách tích hợp các thư viện V4L2RTSP và V4L2ONVIF, dự án này sẽ tận dụng khả năng của Raspberry Pi để trở thành một máy chủ phát video mạnh mẽ, có thể truyền tải video qua giao thức RTSP và tương thích với chuẩn ONVIF. Điều này không chỉ mở ra khả năng giám sát an ninh hiệu quả mà còn ứng dụng rộng rãi trong nhiều lĩnh vực như giáo dục, phát thanh truyền hình, và các hệ thống IoT. Dự án hứa hẹn mang lại một giải pháp phát video trực tuyến linh hoạt, dễ triển khai và quản lý, đồng thời tối ưu hóa chi phí cho người dùng \
