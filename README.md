@@ -158,11 +158,11 @@ Published URL:http://127.0.1.1:8080/onvif/device_service
 ```
 Bây giờ mấy chủ onvif đã được xuất bản, có thể tìm thấy nó thông qua dịch vụ phát hiện thiết bị onvif trong mạng LAN
 ```
-./onvif_wd {IP}
+./wd_onvif.sh {IP}
 ```
 thay thế **IP** bằng dải địa chỉ mạng LAN ví dụ: 192.168.1
 Kết quả:
-```$ ./onvif_dw.sh 192.168.137
+```$ ./wd_onvif.sh 192.168.137
 Connecting to http://192.168.137.254:8080/onvif/device_service
 =>Device::GetDeviceInformation
         Manufacturer:6.1.21-v8+
@@ -186,7 +186,7 @@ Mở 1 cửa sổ chạy server
 ```
 Mở 1 cửa sổ chạy client khám phá toàn bộ dải IP và các port khác nhau
 ```
-./onvif_dw.sh 192.168.x.x
+./wd_onvif.sh 192.168.x.x
 ```
 Mở cửa sổ chạy các camera ảo 
 ```
