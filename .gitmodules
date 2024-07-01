@@ -7,3 +7,6 @@
 [submodule "ws-discovery"]
 	path = ws-discovery
 	url = https://github.com/mpromonet/ws-discovery.git
+[submodule "lib/ws-discovery"]
+	path = lib/ws-discovery
+	url = https://github.com/mpromonet/ws-discovery
