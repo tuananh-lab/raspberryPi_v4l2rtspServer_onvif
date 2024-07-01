@@ -4,3 +4,6 @@
 [submodule "v4l2onvif"]
 	path = v4l2onvif
 	url = https://github.com/mpromonet/v4l2onvif.git
+[submodule "ws-discovery"]
+	path = ws-discovery
+	url = https://github.com/mpromonet/ws-discovery.git
