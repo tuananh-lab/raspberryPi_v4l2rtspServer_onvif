@@ -160,7 +160,7 @@ Bây giờ mấy chủ onvif đã được xuất bản, có thể tìm thấy n
 ```
 ./wd_onvif.sh {IP}
 ```
-thay thế **IP** bằng dải địa chỉ mạng LAN ví dụ: 192.168.1
+thay thế **IP** bằng dải địa chỉ mạng LAN ví dụ: 192.168.137
 Kết quả:
 ```$ ./wd_onvif.sh 192.168.137
 Connecting to http://192.168.137.254:8080/onvif/device_service
@@ -193,6 +193,7 @@ Mở cửa sổ chạy các camera ảo
 cd virtual-camera/
 ./start.sh
 ```
+Mọi người có thể so sánh kết quả của server với những công cụ phần mềm sẵn có như ONVIF Device Manager
 ## DOCKER
 V4L2RtspServer
 ```
