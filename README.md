@@ -178,6 +178,21 @@ Connecting to http://192.168.137.254:8080/onvif/device_service
         wlan0 dc:a6:32:a2:e5:d3
         IP:192.168.137.254/24
 ```
+### 3.4.Tạo nhiều camera ảo để có thể kiểm chứng hoạt động của server
+Mở 3 terminal truy cập vào giao diện của Rasberry Pi
+Mở 1 cửa sổ chạy server
+```
+./onvif-server.exe -i /dev/video0
+```
+Mở 1 cửa sổ chạy client khám phá toàn bộ dải IP và các port khác nhau
+```
+./onvif_dw.sh 192.168.x.x
+```
+Mở cửa sổ chạy các camera ảo 
+```
+cd virtual-camera/
+./start.sh
+```
 ## DOCKER
 V4L2RtspServer
 ```
