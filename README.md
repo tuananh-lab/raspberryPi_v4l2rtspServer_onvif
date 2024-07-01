@@ -158,11 +158,11 @@ Published URL:http://127.0.1.1:8080/onvif/device_service
 ```
 Bây giờ mấy chủ onvif đã được xuất bản, có thể tìm thấy nó thông qua dịch vụ phát hiện thiết bị onvif trong mạng LAN
 ```
-./onvif_wd {IP}
+./wd_onvif.sh {IP}
 ```
 thay thế **IP** bằng dải địa chỉ mạng LAN ví dụ: 192.168.1
 Kết quả:
-```$ ./onvif_dw.sh 192.168.137
+```$ ./wd_onvif.sh 192.168.137
 Connecting to http://192.168.137.254:8080/onvif/device_service
 =>Device::GetDeviceInformation
         Manufacturer:6.1.21-v8+
@@ -177,6 +177,21 @@ Connecting to http://192.168.137.254:8080/onvif/device_service
 =>Device::GetNetworkInterfaces
         wlan0 dc:a6:32:a2:e5:d3
         IP:192.168.137.254/24
+```
+### 3.4.Tạo nhiều camera ảo để có thể kiểm chứng hoạt động của server
+Mở 3 terminal truy cập vào giao diện của Rasberry Pi
+Mở 1 cửa sổ chạy server
+```
+./onvif-server.exe -i /dev/video0
+```
+Mở 1 cửa sổ chạy client khám phá toàn bộ dải IP và các port khác nhau
+```
+./wd_onvif.sh 192.168.x.x
+```
+Mở cửa sổ chạy các camera ảo 
+```
+cd virtual-camera/
+./start.sh
 ```
 ## DOCKER
 V4L2RtspServer
