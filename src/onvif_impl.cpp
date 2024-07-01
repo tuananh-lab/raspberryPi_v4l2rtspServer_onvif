@@ -1,22 +1,7 @@
-/* --------------------------------------------------------------------------
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
------------------------------------------------------------------------------
- onvif_impl.cpp
- 
- V4L2 implementation of ONVIF services
------------------------------------------------------------------------------ */
-
+/*
+Provides methods to handle ONVIF service functions
+including video management, video configuration handling, user verification and authentication, as well as obtaining network information and setting control parameters. controls for video devices.
+*/
 #include <net/if.h>
 #include <ifaddrs.h>
 #include <linux/rtnetlink.h>
