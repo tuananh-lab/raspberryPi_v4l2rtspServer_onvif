@@ -23,7 +23,6 @@
 #include "soapNotificationConsumerBindingService.h"
 
 #include "wsseapi.h"
-
 inline std::ostream &operator<<(std::ostream &out, struct timeval tv)
 {
 	out << "sec: " << tv.tv_sec << " usec: " << tv.tv_usec;
