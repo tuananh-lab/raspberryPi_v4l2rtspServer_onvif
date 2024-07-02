@@ -1,16 +1,5 @@
 /* --------------------------------------------------------------------------
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+This file implements ONVIF's communications services, including methods to obtain video, audio, and other device configuration information and configurations. It connects to the ServiceContext to retrieve and process data from the device. Methods in the file return responses as SOAP objects. The main purpose is to provide communication services according to ONVIF standards.
 -----------------------------------------------------------------------------
  serverMedia.cpp
  
