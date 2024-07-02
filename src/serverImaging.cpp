@@ -1,24 +1,10 @@
-/* --------------------------------------------------------------------------
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
------------------------------------------------------------------------------
- serverImaging.cpp
- 
- imaging.wsdl server
------------------------------------------------------------------------------ */
+/*Here implement ONVIF-compliant imaging service functionalities.
+ This file defines and implements several methods to manage imaging settings of ONVIF-compatible devices. 
+ The methods include retrieving service capabilities, getting and setting imaging settings, moving focus, stopping focus, and retrieving the current status and options for imaging settings. 
+ The integration with the Video4Linux2 (V4L2) API allows the service to control various imaging parameters such as brightness, contrast, saturation, sharpness, exposure, white balance, and focus on video devices.
+ */
 
 #include <linux/videodev2.h>
-
 #include "soapImagingBindingService.h"
 #include "onvif_impl.h"
 
