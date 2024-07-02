@@ -1,9 +1,9 @@
-  name: v4l2onvif
+  name: raspberrypi_onvif_rtspServer
   version: git
-  summary: v4l2 ONVIF 
+  summary: v4l2 RTSP ONVIF 
   description: |
-    * v4l2onvif :
-    read from a V4L2 capture device and write to a V4L2 output device
+    * raspberrypi_onvif_rtspServer :
+    build server stream from v4l2 device and detect it as onvif device
 
   grade: stable 
   confinement: strict
