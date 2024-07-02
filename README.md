@@ -4,7 +4,6 @@
 Dự án "Xây dựng hệ thống máy chủ phát video trực tuyến và phát hiện camera onvif cục bộ trong mạng LAN trên Raspberry Pi" nhằm mục tiêu tạo ra một giải pháp phát trực tuyến video chất lượng cao và tiết kiệm chi phí bằng cách sử dụng Raspberry Pi. Bằng cách tích hợp các thư viện V4L2RTSP và V4L2ONVIF, dự án này sẽ tận dụng khả năng của Raspberry Pi để trở thành một máy chủ phát video mạnh mẽ, có thể truyền tải video qua giao thức RTSP và tương thích với chuẩn ONVIF.Cùng với việc truyền tải video thì hệ thống cũng cung cấp giải pháp tìm kiếm server chứa dịch vụ yêu cầu từ onvif client,tìm kiếm danh sách thiết bị camera onvif từ đó giúp việc quản lí camera một cách dễ dàng và hiệu quả. Điều này không chỉ mở ra khả năng giám sát an ninh hiệu quả mà còn ứng dụng rộng rãi trong nhiều lĩnh vực như giáo dục, phát thanh truyền hình, và các hệ thống IoT. Dự án hứa hẹn mang lại một giải pháp phát video trực tuyến linh hoạt, dễ triển khai và quản lý, đồng thời tối ưu hóa chi phí cho người dùng.
 
 Người thực hiện: Trần Tuấn Anh
-Ngày: 29/06/2024
 ## 1. Cấu hình cho Raspberry Pi
 Yêu cầu phần cứng:  
 * Board Raspbery Pi 4 với Raspberry Pi OS (Debian Bullseye)  
@@ -130,6 +129,7 @@ Xây dựng bằng Makefile
 ```
 make
 ```
+Sau đó các file source chứa các dịch vụ ONVIF sẽ được build ra từ các file WSDL và được lưu trong thư mục gen
 ### 3.3. Sử dụng
 Tạo một máy chủ onvif
 ```
