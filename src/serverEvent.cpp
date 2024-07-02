@@ -1,7 +1,7 @@
 /* --------------------------------------------------------------------------
 Here implement an ONVIF-compliant event handling web service. 
 It includes functionalities such as retrieving service capabilities, creating pull point subscriptions for event notifications, and obtaining event properties.
-Manage event-based interactions between devices and clients, supporting real-time event notifications and configurations.*/
+Manage event-based interactions between devices and clients, supporting real-time event notifications and configurations.
 -----------------------------------------------------------------------------
  serverEvent.cpp
  
