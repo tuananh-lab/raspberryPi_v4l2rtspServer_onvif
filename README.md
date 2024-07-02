@@ -120,6 +120,15 @@ vlc rtsp://192.168.x.x:8554/unicast
 - dành cho thiết bị chụp V4L2 (NVT/NVS),
 - cho các thiết bị đầu ra V4L2 (NVD).
 ### 3.2. Xây dựng
+Dự án sử dụng 2 submodules đó là v4l2rtspserver và ws-discovery
+```
+[submodule "ws-discovery"]
+	path = ws-discovery
+	url = https://github.com/mpromonet/ws-discovery
+[submodule "v4l2rtspserver"]
+	path = v4l2rtspserver
+	url = https://github.com/mpromonet/v4l2rtspserver
+```
 Cài đặt các thành phần phụ trợ
 Cài đặt gsoap cho raspberry pi
 ```
@@ -129,6 +138,7 @@ Xây dựng bằng Makefile
 ```
 make
 ```
+
 Sau đó các file source chứa các dịch vụ ONVIF sẽ được build ra từ các file WSDL và được lưu trong thư mục gen
 ### 3.3. Sử dụng
 Tạo một máy chủ onvif
