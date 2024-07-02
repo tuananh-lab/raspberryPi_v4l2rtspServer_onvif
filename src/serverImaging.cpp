@@ -4,7 +4,6 @@ Here implement ONVIF-compliant imaging service functionalities.
 This file defines and implements several methods to manage imaging settings of ONVIF-compatible devices. 
 The methods include retrieving service capabilities, getting and setting imaging settings, moving focus, stopping focus, and retrieving the current status and options for imaging settings. 
 The integration with the Video4Linux2 (V4L2) API allows the service to control various imaging parameters such as brightness, contrast, saturation, sharpness, exposure, white balance, and focus on video devices.
- */
 -----------------------------------------------------------------------------
  serverImaging.cpp
  
