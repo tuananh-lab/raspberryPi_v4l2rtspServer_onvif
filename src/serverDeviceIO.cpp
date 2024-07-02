@@ -1,6 +1,12 @@
-/*Here implements an ONVIF-complitant web service for managing device I/O operations
+/* --------------------------------------------------------------------------
+Here implements an ONVIF-complitant web service for managing device I/O operations
 including retrieving and configuring video,audio;relay outputs,digital inputs,
-and serial ports*/
+and serial ports
+-----------------------------------------------------------------------------
+ serverDeviceIO.cpp
+ 
+ deviceio.wsdl server
+----------------------------------------------------------------------------- */
 #include "soapDeviceIOBindingService.h"
 #include "onvif_impl.h"
 
