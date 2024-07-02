@@ -1,5 +1,11 @@
-/*Here implements an ONVIF-compliant web service specifically for managing display-related functionalities.
- It includes capabilities to retrieve service capabilities, configure layouts, obtain display options, and manage pane configurations. */
+/* --------------------------------------------------------------------------
+Here implements an ONVIF-compliant web service specifically for managing display-related functionalities.
+It includes capabilities to retrieve service capabilities, configure layouts, obtain display options, and manage pane configurations.
+-----------------------------------------------------------------------------
+ serverDisplay.cpp
+ 
+ display.wsdl server
+----------------------------------------------------------------------------- */
 #include "soapDisplayBindingService.h"
 #include "onvif_impl.h"
 
