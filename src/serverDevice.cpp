@@ -1,4 +1,5 @@
-/*Services list in ONVIF camera:
+/* --------------------------------------------------------------------------
+Services list in ONVIF camera:
 Device Service
 Media Service
 Imaging Service
@@ -9,7 +10,12 @@ Search Service
 Display Service
 DeviceIO Service
 Receiver Service
-PTZ Service*/
+PTZ Service
+-----------------------------------------------------------------------------
+ serverDevice.cpp
+ 
+ devicemgmt.wsdl server
+----------------------------------------------------------------------------- */
 #include <ifaddrs.h>
 #include <net/if.h>
 #include <netpacket/packet.h>
