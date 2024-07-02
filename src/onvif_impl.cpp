@@ -1,7 +1,11 @@
-/*
+/* --------------------------------------------------------------------------
 Provides methods to handle ONVIF service functions
 including video management, video configuration handling, user verification and authentication, as well as obtaining network information and setting control parameters. controls for video devices.
-*/
+-----------------------------------------------------------------------------
+ onvif_impl.cpp
+ 
+ V4L2 implementation of ONVIF services
+----------------------------------------------------------------------------- */
 #include <net/if.h>
 #include <ifaddrs.h>
 #include <linux/rtnetlink.h>
