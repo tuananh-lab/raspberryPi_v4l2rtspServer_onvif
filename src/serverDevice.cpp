@@ -1,22 +1,15 @@
-/* --------------------------------------------------------------------------
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
------------------------------------------------------------------------------
- serverDevice.cpp
- 
- devicemgmt.wsdl server
------------------------------------------------------------------------------ */
-
+/*Services list in ONVIF camera:
+Device Service
+Media Service
+Imaging Service
+Event Service
+Recording Service
+Replay Service
+Search Service
+Display Service
+DeviceIO Service
+Receiver Service
+PTZ Service*/
 #include <ifaddrs.h>
 #include <net/if.h>
 #include <netpacket/packet.h>
@@ -29,7 +22,7 @@
 
 #include "soapDeviceBindingService.h"
 #include "onvif_impl.h"
-
+/*Function retrieves list services provied by device*/
 int DeviceBindingService::GetServices(_tds__GetServices *tds__GetServices, _tds__GetServicesResponse &tds__GetServicesResponse) 
 {
 	std::cout << __FUNCTION__ << std::endl;
@@ -163,7 +156,7 @@ int DeviceBindingService::GetServices(_tds__GetServices *tds__GetServices, _tds_
 	
 	return SOAP_OK;
 }
-
+/*Function fetches the capabilities of the device service*/
 int DeviceBindingService::GetServiceCapabilities(_tds__GetServiceCapabilities *tds__GetServiceCapabilities, _tds__GetServiceCapabilitiesResponse &tds__GetServiceCapabilitiesResponse) 
 {
 	std::cout << __FUNCTION__ << std::endl;
@@ -171,7 +164,7 @@ int DeviceBindingService::GetServiceCapabilities(_tds__GetServiceCapabilities *t
 	tds__GetServiceCapabilitiesResponse.Capabilities = ctx->getDeviceServiceCapabilities(this->soap);
 	return SOAP_OK;
 }
-
+/*Function retrieves system information*/
 int DeviceBindingService::GetDeviceInformation(_tds__GetDeviceInformation *tds__GetDeviceInformation, _tds__GetDeviceInformationResponse &tds__GetDeviceInformationResponse) 
 {
 	std::cout << __FUNCTION__ << std::endl;
@@ -186,7 +179,7 @@ int DeviceBindingService::GetDeviceInformation(_tds__GetDeviceInformation *tds__
 	}	
 	return SOAP_OK;
 }
-
+/*Function sets the system date and time based on provided input values*/
 int DeviceBindingService::SetSystemDateAndTime(_tds__SetSystemDateAndTime *tds__SetSystemDateAndTime, _tds__SetSystemDateAndTimeResponse &tds__SetSystemDateAndTimeResponse) 
 {
 	std::cout << __FUNCTION__ << std::endl;
@@ -199,7 +192,7 @@ int DeviceBindingService::SetSystemDateAndTime(_tds__SetSystemDateAndTime *tds__
 	}
 	return SOAP_OK;
 }
-
+/*Function retrieves the current system date and time*/
 int DeviceBindingService::GetSystemDateAndTime(_tds__GetSystemDateAndTime *tds__GetSystemDateAndTime, _tds__GetSystemDateAndTimeResponse &tds__GetSystemDateAndTimeResponse) 
 {
 	std::cout << __FUNCTION__ << std::endl;
