@@ -1,18 +1,19 @@
 #!/bin/bash
 
-# Kiểm tra xem người dùng đã cung cấp dải mạng hay chưa
+
+# Check if user provided network range
 if [ -z "$1" ]; then
   echo "Usage: $0 <network-prefix>"
   echo "Example: $0 192.168.0"
   exit 1
 fi
 
-# Nhận dải mạng từ tham số dòng lệnh
+# Get network range from command line parameters
 network="$1"
 
-# Dải mạng từ 1 đến 254 (tùy thuộc vào subnet của bạn, có thể thay đổi nếu cần)
+# Network range from 1 to 254 depend on my subnet
 for ip in {1..254}; do
-  # Ping địa chỉ IP một lần và chờ 1 giây để nhận phản hồi
+  # Ping to IP address once and wait 1s to receive a response
   (
     if ping -c 1 -W 1 ${network}.${ip} > /dev/null 2>&1; then
       ./v4l2onvif/onvif-client.exe "http://${network}.${ip}:8080/onvif/device_service"
@@ -22,5 +23,8 @@ for ip in {1..254}; do
   ) &
 done
 
-# Chờ tất cả các lệnh ping hoàn thành
+# 8080 is the default HTTP port that the server is waiting on.
+# 10000 and 10001 are the ports where the virtual onvif camera is created.
+
+# Wait ping command completed
 wait
