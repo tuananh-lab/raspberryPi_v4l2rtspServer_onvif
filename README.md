@@ -113,7 +113,7 @@ Xem luồng stream qua vlc
 ```
 vlc rtsp://192.168.x.x:8554/unicast
 ```
-## 3. V4L2ONVIF
+## 3. Tích hợp V4L2ONVIF 
 ### 3.1. Giới thiệu
 Đây là nỗ lực triển khai máy chủ ONVIF:
 
@@ -127,9 +127,10 @@ cd raspberrypi_onvif_rtspServer
 make
 ```
 Cài đặt các thành phần phụ trợ
-Cài đặt gsoap cho raspberry pi
 ```
+sudo apt-get update && sudo apt-get upgrade
 sudo apt-get install -y gsoap libgsoap-dev
+sudo apt-get install cmake liblog4cpp5-dev libv4l-dev libssl-dev git raspberrypi-kernel-headers autoconf libtool -y
 ```
 Xây dựng bằng Makefile
 ```
@@ -144,7 +145,7 @@ onvif-server.exe [-H http port] [-R rtsp port] [-u username] [-p password] [-i v
 ```
 ví dụ
 ```
-cd /v4l2onvif
+cd /raspberrypi_onvif_rtspServer 
 ./onvif-server -i /dev/video0
 ```
 Kết quả
