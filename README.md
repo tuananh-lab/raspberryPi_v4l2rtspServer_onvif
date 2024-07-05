@@ -113,7 +113,7 @@ Xem luồng stream qua vlc
 ```
 vlc rtsp://192.168.x.x:8554/unicast
 ```
-## 3. Tích hợp V4L2ONVIF 
+## 3. Tích hợp 
 ### 3.1. Giới thiệu
 Đây là nỗ lực triển khai máy chủ ONVIF:
 
@@ -144,7 +144,7 @@ Tạo một máy chủ onvif
 onvif-server.exe [-H http port] [-R rtsp port] [-u username] [-p password] [-i v4l2 input device] [-o v4l2 output device]
 ```
 ví dụ
-```
+```ONVIF
 cd /raspberrypi_onvif_rtspServer 
 ./onvif-server -i /dev/video0
 ```
@@ -153,15 +153,15 @@ Kết quả
 $ ./onvif-server.exe -i /dev/video0
 Http:8080 rtsp:8554
 Published URL:http://127.0.1.1:8080/onvif/device_service
-[NOTICE] /home/hust/v4l2onvif/v4l2rtspserver/src/V4l2RTSPServer.cpp:37
+[NOTICE] /home/hust/raspberrypi_onvif_rtspServer/v4l2rtspserver/src/V4l2RTSPServer.cpp:37
         Create V4L2 Source.../dev/video0
-[NOTICE] /home/hust/v4l2onvif/v4l2rtspserver/libv4l2cpp/src/V4l2Device.cpp:133
+[NOTICE] /home/hust/raspberrypi_onvif_rtspServer/v4l2rtspserver/libv4l2cpp/src/V4l2Device.cpp:133
         driver:bcm2835 mmal capabilities:85200005 mandatory:4000001
-[NOTICE] /home/hust/v4l2onvif/v4l2rtspserver/libv4l2cpp/src/V4l2Device.cpp:136
+[NOTICE] /home/hust/raspberrypi_onvif_rtspServer/v4l2rtspserver/libv4l2cpp/src/V4l2Device.cpp:136
         /dev/video0 support capture
-[NOTICE] /home/hust/v4l2onvif/v4l2rtspserver/libv4l2cpp/src/V4l2Device.cpp:138
+[NOTICE] /home/hust/raspberrypi_onvif_rtspServer/v4l2rtspserver/libv4l2cpp/src/V4l2Device.cpp:138
         /dev/video0 support read/write
-[NOTICE] /home/hust/v4l2onvif/v4l2rtspserver/libv4l2cpp/src/V4l2Device.cpp:139
+[NOTICE] /home/hust/raspberrypi_onvif_rtspServer/v4l2rtspserver/libv4l2cpp/src/V4l2Device.cpp:139
         /dev/video0 support streamingcall soap_wsdd_Hello
 ```
 Bây giờ mấy chủ onvif đã được xuất bản, có thể tìm thấy nó thông qua dịch vụ phát hiện thiết bị onvif trong mạng LAN
@@ -173,7 +173,7 @@ cd main
 ```
 thay thế **IP** bằng dải địa chỉ mạng LAN ví dụ: 192.168.137
 Kết quả:
-```$ ./wd_onvif.sh 192.168.137
+```$ ./dw_onvif.sh 192.168.137
 Connecting to http://192.168.137.254:8080/onvif/device_service
 =>Device::GetDeviceInformation
         Manufacturer:6.1.21-v8+
@@ -210,7 +210,7 @@ V4L2RtspServer
 ```
   docker run --device=/dev/video0 -p 8554:8554 -it mpromonet/v4l2rtspserver -u "" -H640 -W480 
 ```
-V4L2OnvifServer
+Raspberrypi_onvif_rtspServer
 ```
-docker run --device=/dev/video0 -p 8080:8080 -it mpromonet/v4l2onvif
+docker run --device=/dev/video0 -p 8080:8080 -it raspberrypi_onvif_rtspServer
 ```
