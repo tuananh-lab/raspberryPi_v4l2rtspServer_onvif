@@ -73,7 +73,7 @@ sudo apt-get install cmake liblog4cpp5-dev libv4l-dev libssl-dev git raspberrypi
 ```
 Xây dựng
 ```
-git clone https://github.com/mpromonet/v4l2rtspserver.git;
+git clone https://github.com/mpromonet/v4l2rtspserver.git
     
 cd v4l2rtspserver/
 cmake .
@@ -120,14 +120,11 @@ vlc rtsp://192.168.x.x:8554/unicast
 - dành cho thiết bị chụp V4L2 (NVT/NVS),
 - cho các thiết bị đầu ra V4L2 (NVD).
 ### 3.2. Xây dựng
-Dự án sử dụng 2 submodules đó là v4l2rtspserver và ws-discovery
+Tải source code dự án từ GitHub:
 ```
-[submodule "ws-discovery"]
-	path = ws-discovery
-	url = https://github.com/mpromonet/ws-discovery
-[submodule "v4l2rtspserver"]
-	path = v4l2rtspserver
-	url = https://github.com/mpromonet/v4l2rtspserver
+git clone https://github.com/tuananh-lab/raspberrypi_onvif_rtspServer.git
+cd raspberrupi_onvif_rtspServer
+make
 ```
 Cài đặt các thành phần phụ trợ
 Cài đặt gsoap cho raspberry pi
