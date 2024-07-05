@@ -123,7 +123,7 @@ vlc rtsp://192.168.x.x:8554/unicast
 Tải source code dự án từ GitHub:
 ```
 git clone https://github.com/tuananh-lab/raspberrypi_onvif_rtspServer.git
-cd raspberrupi_onvif_rtspServer
+cd raspberrypi_onvif_rtspServer
 make
 ```
 Cài đặt các thành phần phụ trợ
