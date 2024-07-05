@@ -1,4 +1,4 @@
-# DỰ ÁN XÂY DỰNG HỆ THỐNG MÁY CHỦ PHÁT VIDEO TRỰC TUYẾN VÀ PHÁT HIỆN CAMERA ONVIF CỤC BỘ TRONG MẠNG LAN TRÊN RASPBERY PI
+# DỰ ÁN XÂY DỰNG HỆ THỐNG MÁY CHỦ PHÁT VIDEO TRỰC TUYẾN SỬ DỤNG RTSP VÀ PHÁT HIỆN CAMERA ONVIF  TRONG MẠNG LAN TRÊN RASPBERY PI
 
 ## Giới thiệu dự án
 Dự án "Xây dựng hệ thống máy chủ phát video trực tuyến và phát hiện camera onvif cục bộ trong mạng LAN trên Raspberry Pi" nhằm mục tiêu tạo ra một giải pháp phát trực tuyến video chất lượng cao và tiết kiệm chi phí bằng cách sử dụng Raspberry Pi. Bằng cách tích hợp các thư viện,submodules như V4L2RTSP và WS-DISCOVERY, dự án này sẽ tận dụng khả năng của Raspberry Pi để trở thành một máy chủ phát video mạnh mẽ, có thể truyền tải video qua giao thức RTSP và tương thích với chuẩn ONVIF.Cùng với việc truyền tải video thì hệ thống cũng cung cấp giải pháp tìm kiếm server chứa dịch vụ yêu cầu từ onvif client,tìm kiếm danh sách thiết bị camera onvif từ đó giúp việc quản lí camera một cách dễ dàng và hiệu quả. Điều này không chỉ mở ra khả năng giám sát an ninh hiệu quả mà còn ứng dụng rộng rãi trong nhiều lĩnh vực như giáo dục, phát thanh truyền hình, và các hệ thống IoT. Dự án hứa hẹn mang lại một giải pháp phát video trực tuyến linh hoạt, dễ triển khai và quản lý, đồng thời tối ưu hóa chi phí cho người dùng.
@@ -73,7 +73,7 @@ sudo apt-get install cmake liblog4cpp5-dev libv4l-dev libssl-dev git raspberrypi
 ```
 Xây dựng
 ```
-git clone https://github.com/mpromonet/v4l2rtspserver.git;
+git clone https://github.com/mpromonet/v4l2rtspserver.git
     
 cd v4l2rtspserver/
 cmake .
@@ -113,26 +113,24 @@ Xem luồng stream qua vlc
 ```
 vlc rtsp://192.168.x.x:8554/unicast
 ```
-## 3. V4L2ONVIF
+## 3. Tích hợp V4L2ONVIF 
 ### 3.1. Giới thiệu
 Đây là nỗ lực triển khai máy chủ ONVIF:
 
 - dành cho thiết bị chụp V4L2 (NVT/NVS),
 - cho các thiết bị đầu ra V4L2 (NVD).
 ### 3.2. Xây dựng
-Dự án sử dụng 2 submodules đó là v4l2rtspserver và ws-discovery
+Tải source code dự án từ GitHub:
 ```
-[submodule "ws-discovery"]
-	path = ws-discovery
-	url = https://github.com/mpromonet/ws-discovery
-[submodule "v4l2rtspserver"]
-	path = v4l2rtspserver
-	url = https://github.com/mpromonet/v4l2rtspserver
+git clone https://github.com/tuananh-lab/raspberrypi_onvif_rtspServer.git
+cd raspberrypi_onvif_rtspServer
+make
 ```
 Cài đặt các thành phần phụ trợ
-Cài đặt gsoap cho raspberry pi
 ```
+sudo apt-get update && sudo apt-get upgrade
 sudo apt-get install -y gsoap libgsoap-dev
+sudo apt-get install cmake liblog4cpp5-dev libv4l-dev libssl-dev git raspberrypi-kernel-headers autoconf libtool -y
 ```
 Xây dựng bằng Makefile
 ```
@@ -147,7 +145,7 @@ onvif-server.exe [-H http port] [-R rtsp port] [-u username] [-p password] [-i v
 ```
 ví dụ
 ```
-cd /v4l2onvif
+cd /raspberrypi_onvif_rtspServer 
 ./onvif-server -i /dev/video0
 ```
 Kết quả
