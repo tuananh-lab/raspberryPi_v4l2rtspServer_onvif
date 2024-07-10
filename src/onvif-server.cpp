@@ -30,7 +30,7 @@
 #include "soapSubscriptionManagerBindingService.h"
 
 // ws-discovery
-#include "wsseapi.h"
+#include "wsseapi.h" //security required ingredition with WS-security 
 #include "wsd-server.h"
 
 // v4l2rstp
